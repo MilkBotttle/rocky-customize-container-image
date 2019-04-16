@@ -8,5 +8,10 @@ RUN yum install -y \
                    openstack-neutron-fwaas
 
 RUN cp /usr/lib/python2.7/site-packages/neutron_lbaas/extensions/* /usr/lib/python2.7/site-packages/vmware_nsx/extensions/.
+
+RUN echo "[fwaas]" >> /etc/neutron/neutron.conf && \
+    echo "enabled=True" >> /etc/neutron/neutron.conf && \
+    echo "driver=vmware_nsxv3_edge_v2" >> /etc/neutron/neutron.conf
+
 USER neutron
 
