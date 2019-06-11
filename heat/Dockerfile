@@ -1,4 +1,4 @@
-FROM docker.io/tripleorocky/centos-binary-heat-engine:c9f581caeb51cbdd87f9284176d40bdcca628f56_ad69faca
+FROM docker.io/tripleorocky/centos-binary-heat-engine:current-tripleo
 LABEL maintainer='cameron.c@inwinstack.com'
 
 USER root
